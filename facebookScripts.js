@@ -50,6 +50,11 @@ function makeAccount() {
 
 function request(){
     //send email to Mr.Erietta?
+    var link = "mailto:mbarr241@fiu.edu"
+    + "?cc=myCCaddress@example.com"
+    + "&subject=" + escape("This is my subject - HEY")
+    + "&body=" + escape("hello from the other side");
 
+    window.location.href = link;
     console.log("Request sent");
 }
