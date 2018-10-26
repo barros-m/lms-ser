@@ -16,7 +16,7 @@ function logIn() {
          FB.api('/me', function(response) {
              name = response.name;
              //email = reponse.email;
-
+             statusChangeCallback(response);
              console.log('your email: ' + email + " .")
            console.log('Good to see you, ' + name + '.');
          });
