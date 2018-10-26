@@ -52,7 +52,7 @@ function logIn() {
                 person.name = userData.name;
                 person.email = userData.email;
                 person.picture = userData.picture.data.url;
-                console.log(name, ": haha : ",email);
+                console.log(person.name, ": haha : ", person.email);
                 // $.ajax({
                 //    url: "index.html",
                 //    method: "POST",
