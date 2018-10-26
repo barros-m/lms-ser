@@ -6,25 +6,6 @@
     js.src = "https://connect.facebook.net/en_US/sdk.js";
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
-
-var name = "";
-var email = "";
-function logIn() {
-    FB.login(function(response) {
-        if (response.authResponse) {
-         console.log('Welcome!  Fetching your information.... ');
-         FB.api('/me', function(response) {
-             name = response.name;
-             //email = reponse.email;
-             statusChangeCallback(response);
-             console.log('your email: ' + email + " .")
-           console.log('Good to see you, ' + name + '.');
-         });
-        } else {
-         console.log('User cancelled login or did not fully authorize.');
-        }
-    });
-
     /*
     Things to do:
 
@@ -33,8 +14,60 @@ function logIn() {
     -start developing the course page
     
     */
-}
+var name = "";
+var email = "";
+// function logIn() {
+//     FB.login(function(response) {
+//         // if (response.authResponse) {
+//         //  console.log('Welcome!  Fetching your information.... ');
+//         //  FB.api('/me', function(response) {
+//         //      if (response.status == "connected") {
+                
+//         //      }
+//         //      name = response.name;
+//         //      //email = reponse.email;
+//         //      statusChangeCallback(response);
+//         //      console.log('your email: ' + email + " .")
+//         //    console.log('Good to see you, ' + name + '.');
+//         //  });
+//         // } else {
+//         //  console.log('User cancelled login or did not fully authorize.');
+//         // }
+//         if (response.status == "connected"){
 
+//         }
+//     }, {scope: 'public_profile', 'email'})
+
+
+// }
+var person = { userID: "", name: "", accessToken: "", picture: "", email: ""};
+
+function logIn() {
+    FB.login(function (response) {
+        if (response.status == "connected") {
+            person.userID = response.authResponse.userID;
+            person.accessToken = response.authResponse.accessToken;
+
+            FB.api('/me?fields=id,name,email,picture.type(large)', function (userData) {
+                person.name = userData.name;
+                person.email = userData.email;
+                person.picture = userData.picture.data.url;
+                console.log(name, ": haha : ",email);
+                // $.ajax({
+                //    url: "index.html",
+                //    method: "POST",
+                //    data: person,
+                //    dataType: 'text',
+                //    success: function (serverResponse) {
+                //        console.log(person);
+                //        //if (serverResponse == "success")
+                //            //window.location = "index.php";
+                //    }
+                // });
+            });
+        }
+    }, {scope: 'public_profile, email'})
+}
 
 window.fbAsyncInit = function () {
     FB.init({
