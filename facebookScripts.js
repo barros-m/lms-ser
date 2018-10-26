@@ -50,11 +50,17 @@ function makeAccount() {
 
 function request(){
     //send email to Mr.Erietta?
-    var link = "mailto:mbarr241@fiu.edu"
-    + "?cc=myCCaddress@example.com"
-    + "&subject=" + escape("This is my subject - HEY")
-    + "&body=" + escape("hello from the other side");
+    FB.login(function(response) {
+        if (response.authResponse) {
+         console.log('Welcome!  Fetching your information.... ');
+         FB.api('/me', function(response) {
+           console.log('Good to see you, ' + response.name + '.');
+         });
+        } else {
+         console.log('User cancelled login or did not fully authorize.');
+        }
+    });
 
-    window.location.href = link;
+
     console.log("Request sent");
 }
