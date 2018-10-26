@@ -15,7 +15,7 @@ function logIn() {
          console.log('Welcome!  Fetching your information.... ');
          FB.api('/me', function(response) {
              name = response.name;
-             email = reponse.email;
+             //email = reponse.email;
 
              console.log('your email: ' + email + " .")
            console.log('Good to see you, ' + name + '.');
