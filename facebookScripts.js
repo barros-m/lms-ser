@@ -1,4 +1,3 @@
-<script type="text/javascript">
 //loads and initialize the SDK of facebook
 (function (d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
@@ -56,19 +55,4 @@ function makeAccount() {
 
 function request(){
     console.log("No idea, how...");
-   <?php
-    $to = "matheusbarros1305@gmail.com";
-    $from = "test@gmail.com";
-    $subject = "Hello, test";
-    $message = "Hey, test. Test. Matheus. Test.";
-    
-    $body = "Jovem \n\n $message";
-    
-    $headers = "From: $from";
-    
-    mail($to,$subject,$body,$headers);
-    echo "Your Message Has Been Sent Successfully (:!!.";
-   ?>
 }
-
-</script>
