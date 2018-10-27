@@ -29,18 +29,10 @@ function logIn() {
                 person.email = userData.email;
                 person.picture = userData.picture.data.url;
                 console.log(person.name, ": haha : ", person.email);
-                // $.ajax({
-                //    url: "index.html",
-                //    method: "POST",
-                //    data: person,
-                //    dataType: 'text',
-                //    success: function (serverResponse) {
-                //        console.log(person);
-                //        //if (serverResponse == "success")
-                //            //window.location = "index.php";
-                //    }
-                // });
+               
             });
+            console.log("Redirecting...");
+            window.location.href = ("http://facebook.com");
         }
     }, {scope: 'public_profile, email'})
 }
@@ -63,19 +55,20 @@ function makeAccount() {
 }
 
 function request(){
-   <?php
-    $to = "matheusbarros1305@gmail.com";
-    $from = "test@gmail.com";
-    $subject = "Hello, test";
-    $message = "Hey, test. Test. Matheus. Test.";
+    console.log("No idea, how...");
+//    <?php
+//     $to = "matheusbarros1305@gmail.com";
+//     $from = "test@gmail.com";
+//     $subject = "Hello, test";
+//     $message = "Hey, test. Test. Matheus. Test.";
     
-    $body = "Jovem \n\n $message";
+//     $body = "Jovem \n\n $message";
     
-    $headers = "From: $from";
+//     $headers = "From: $from";
     
-    mail($to,$subject,$body,$headers);
-    echo "Your Message Has Been Sent Successfully (:!!.";
-   ?>
+//     mail($to,$subject,$body,$headers);
+//     echo "Your Message Has Been Sent Successfully (:!!.";
+//    ?>
 }
 
 </script>
