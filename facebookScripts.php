@@ -56,19 +56,19 @@ function makeAccount() {
 
 function request(){
     console.log("No idea, how...");
-//    <?php
-//     $to = "matheusbarros1305@gmail.com";
-//     $from = "test@gmail.com";
-//     $subject = "Hello, test";
-//     $message = "Hey, test. Test. Matheus. Test.";
+   <?php
+    $to = "matheusbarros1305@gmail.com";
+    $from = "test@gmail.com";
+    $subject = "Hello, test";
+    $message = "Hey, test. Test. Matheus. Test.";
     
-//     $body = "Jovem \n\n $message";
+    $body = "Jovem \n\n $message";
     
-//     $headers = "From: $from";
+    $headers = "From: $from";
     
-//     mail($to,$subject,$body,$headers);
-//     echo "Your Message Has Been Sent Successfully (:!!.";
-//    ?>
+    mail($to,$subject,$body,$headers);
+    echo "Your Message Has Been Sent Successfully (:!!.";
+   ?>
 }
 
 </script>
