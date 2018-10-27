@@ -1,3 +1,4 @@
+<script type="text/javascript">
 //loads and initialize the SDK of facebook
 (function (d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
@@ -6,40 +7,15 @@
     js.src = "https://connect.facebook.net/en_US/sdk.js";
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
-    /*
+
+/*
     Things to do:
 
     -payment method
     -redirect user if connected to course page 
     -start developing the course page
-    
-    */
-var name = "";
-var email = "";
-// function logIn() {
-//     FB.login(function(response) {
-//         // if (response.authResponse) {
-//         //  console.log('Welcome!  Fetching your information.... ');
-//         //  FB.api('/me', function(response) {
-//         //      if (response.status == "connected") {
-                
-//         //      }
-//         //      name = response.name;
-//         //      //email = reponse.email;
-//         //      statusChangeCallback(response);
-//         //      console.log('your email: ' + email + " .")
-//         //    console.log('Good to see you, ' + name + '.');
-//         //  });
-//         // } else {
-//         //  console.log('User cancelled login or did not fully authorize.');
-//         // }
-//         if (response.status == "connected"){
 
-//         }
-//     }, {scope: 'public_profile', 'email'})
-
-
-// }
+*/
 var person = { userID: "", name: "", accessToken: "", picture: "", email: ""};
 
 function logIn() {
@@ -151,3 +127,5 @@ function request(){
 
     console.log("Request sent");
 }
+
+</script>
