@@ -31,7 +31,7 @@ function logIn() {
                
             });
             console.log("Redirecting...");
-            window.location.href = ("http://facebook.com");
+            window.location.href = ("/course.html");
         }
     }, {scope: 'public_profile, email'})
 }
@@ -54,5 +54,5 @@ function makeAccount() {
 }
 
 function request(){
-    console.log("No idea, how...");
+    console.log("No idea, how..."); 
 }
