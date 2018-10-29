@@ -1,3 +1,4 @@
+// Handles by client = STATIC
 //loads and initialize the SDK of facebook
 (function (d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
